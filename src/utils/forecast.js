@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(undefined, {
                 temperature: body.main.temp,
                 description: body.weather[0].description,
-                text: `${capitalize(body.weather[0].description)}. It's currently ${body.main.temp} degrees out there.`
+                text: `${capitalize(body.weather[0].description)}. It's currently ${body.main.temp} out there but people feels like ${body.main.feels_like} degrees. Humidity is ${body.main.humidity} percent so no possibility to rain.`
             })
         }
     })
